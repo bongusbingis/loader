@@ -1,7 +1,8 @@
 [package]
 name = "bongusbingis/loader"
-version = "2.0.0"
+version = "3.0.0"
 registry = "https://github.com/UpliftGames/wally-index"
+description = "Fork of loader module with extended functionality for my workflow"
 realm = "shared"
 
 [dependencies]
