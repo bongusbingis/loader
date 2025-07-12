@@ -1,3 +1,5 @@
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local RunService = game:GetService("RunService")
 --[=[
 	@class Loader
 
@@ -16,6 +18,12 @@
 	```
 ]=]
 local Loader = {}
+Loader.Shared = ReplicatedStorage:WaitForChild("Shared")
+if RunService:IsServer() then
+	Loader.Services = {}
+else
+	Loader.Controllers = {}
+end
 
 --[=[
 	@within Loader
