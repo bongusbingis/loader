@@ -132,7 +132,7 @@ end
 ]=]
 function Loader.SpawnAll(loadedModules: { [string]: any }, methodName: string, shouldRunInNewThread: boolean)
 	for name, mod in loadedModules do
-		if mod["Disabled"] then
+		if typeof(mod) == "function" or mod["Disabled"] then
 			continue
 		end
 		
